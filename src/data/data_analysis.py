@@ -4,11 +4,6 @@ from pathlib import Path
 import seaborn as sb
 
 
-def load_data(filepath):
-    df = pd.read_csv(filepath)
-    return df
-
-
 def correlations(df: pd.DataFrame, pathToFigures: Path):
     # Get the non-numerical columns
     non_numeric_cols = df.select_dtypes(exclude=['number']).columns
@@ -35,8 +30,8 @@ if __name__ == "__main__":
     projectRoot = Path(__file__).parent / "../.."
     pathToFigures = projectRoot/"reports/figures"
 
-    # insurance_data = load_data(projectRoot/"data/raw/insurance.csv")
-    customers_data = load_data(projectRoot/"data/raw/customers.csv")
+    # insurance_data = pd.read_csv(projectRoot/"data/raw/insurance.csv")
+    customers_data = pd.read_csv(projectRoot/"data/raw/customers.csv")
 
     # allInOneEda(customers_data, projectRoot/"reports/figures", name="CustomersEda")
     # correlations(customers_data)
