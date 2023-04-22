@@ -17,7 +17,8 @@ data['Profession'] = data['Profession'].fillna('Unknown Profession')
 data = data.drop(data[data['Work Experience'] > data['Age']].index)
 
 # Drop rows where age is less than 18 and customer has work experience or profession
-data = data.drop(data[(data['Age'] < 18) & ((data['Work Experience'] > 0) | (data['Profession'] != 'Unknown Profession'))].index)
+data = data.drop(data[(data['Age'] < 18) & ((data['Work Experience'] > 0)
+                 | (data['Profession'] != 'Unknown Profession'))].index)
 
 
 # c. Keep zeros in Work Experience column as is, assuming they represent customers with no work experience.
