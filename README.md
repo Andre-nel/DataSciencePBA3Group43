@@ -1,2 +1,2 @@
-# DataSciencePBA3Group43
-Data Science PBA 3
+# MedCostPrediction
+Predict healthcare costs based on various patient characteristics.
