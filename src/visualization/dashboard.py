@@ -156,7 +156,6 @@ app.layout = dash_bootstrap_components.Container([
      State("gender", "value"),
      State("profession", "value")]
 )
-# Add more parameters for other features
 def predict_spending_score(n_clicks, age, annual_income, work_experience, family_size, gender, profession):
     if (n_clicks is None or age is None or annual_income is None
             or work_experience is None or family_size is None or gender is None or profession is None):
