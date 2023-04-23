@@ -5,7 +5,7 @@ from pathlib import Path
 projectRoot = Path(__file__).parent / "../.."
 data = pd.read_csv(projectRoot/"data/raw/customers.csv")
 
-# Cleaning
+# Cleaning.
 
 # a. Create a new category named 'Unknown Profession' to represent customers without a specified profession
 data['Profession'] = data['Profession'].fillna('Unknown Profession')

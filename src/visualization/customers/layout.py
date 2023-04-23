@@ -8,10 +8,10 @@ import pickle
 
 
 def layout(app):
-    projectRoot = Path(__file__).parent / "../.."
+    projectRoot = Path(__file__).parent.parent.parent.parent
     data = pd.read_csv(projectRoot/"data/processed/customers.csv")
     data = data.drop('CustomerID', axis=1)
-    pickledDir = Path(__file__).parent.parent / "models" / "pickled"
+    pickledDir = projectRoot / "src" / "models" / "pickled"
 
     with open(pickledDir / "linear_regression_features.pkl", "rb") as file:
         loaded_features = pickle.load(file)

@@ -3,7 +3,7 @@ import pickle
 from dash.dependencies import Input, Output, State
 from pathlib import Path
 
-pickledDir = Path(__file__).parent.parent / "models" / "pickled"
+pickledDir = Path(__file__).parent.parent.parent / "models" / "pickled"
 with open(pickledDir / "linear_regression_model.pkl", "rb") as file:
     loaded_model = pickle.load(file)
 with open(pickledDir / "linear_regression_scaler.pkl", "rb") as file:

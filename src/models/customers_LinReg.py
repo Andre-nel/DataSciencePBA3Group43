@@ -70,7 +70,7 @@ print(f"R2 Score: {r2:.2f}")
 """
 Mean Squared Error: 0.08
 R2 Score: -0.01
-
+.
 Not good."""
 
 
